@@ -76,4 +76,5 @@ public class Hotel
                 + weekdayRegularCustomerCost + "Regular Customer WeekDay Cost=" + weekdayRegularCustomerCost + ", Reward Customer WeekDay Cost="
                 + weekdayRewardCustomerCost + "Reward Customer WeekDay Cost=" + weekendRewardCustomerCost + "]\n";
     }
+
 }
