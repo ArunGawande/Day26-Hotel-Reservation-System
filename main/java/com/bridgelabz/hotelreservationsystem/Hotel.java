@@ -2,21 +2,24 @@ package com.bridgelabz.hotelreservationsystem;
 
 public class Hotel
 {
-    String hotelName;
-    int rating;
-    double weekdayRegularCustomerCost;
-    double weekendRegularCustomerCost;
+    private String hotelName;
+    private int rating;
+    private double weekdayRegularCustomerCost;
+    private double weekendRegularCustomerCost;
+    private double weekdayRewardCustomerCost;
+    private double weekendRewardCustomerCost;
 
     public Hotel() {
-
     }
 
-    public Hotel(String hotelName, int rating, double weekdayRegularCustomerCost, double weekdayRewardCustomerCost,
-                 double weekendRegularCustomerCost, double weekendRewardCustomerCost) {
+    public Hotel(String hotelName, int rating, double weekdayRegularCustomerCost, double weekendRegularCustomerCost,
+                 double weekdayRewardCustomerCost, double weekendRewardCustomerCost) {
         this.hotelName = hotelName;
         this.rating = rating;
         this.weekdayRegularCustomerCost = weekdayRegularCustomerCost;
         this.weekendRegularCustomerCost = weekendRegularCustomerCost;
+        this.weekdayRewardCustomerCost = weekdayRewardCustomerCost;
+        this.weekendRewardCustomerCost = weekendRewardCustomerCost;
     }
 
     public String getHotelName() {
@@ -35,25 +38,43 @@ public class Hotel
         this.rating = rating;
     }
 
-    public double getWeekdayRegularCustomerPrice() {
+    public double getWeekdayRegularCustomerCost() {
         return weekdayRegularCustomerCost;
     }
 
-    public void setWeekdayRegularCustomerPrice(double weekdayRegularCustomerCost) {
+    public void setWeekdayRegularCustomerCost(double weekdayRegularCustomerCost) {
         this.weekdayRegularCustomerCost = weekdayRegularCustomerCost;
     }
 
-    public double getWeekendRegularCustomerPrice() {
+    public double getWeekendRegularCustomerCost() {
         return weekendRegularCustomerCost;
     }
 
-    public void setWeekendRegularCustomerPrice(double weekendRegularCustomerCost) {
+    public void setWeekendRegularCustomerCost(double weekendRegularCustomerCost) {
         this.weekendRegularCustomerCost = weekendRegularCustomerCost;
+    }
+
+    public double getWeekdayRewardCustomerCost() {
+        return weekdayRewardCustomerCost;
+    }
+
+    public void setWeekdayRewardCustomerCost(double weekdayRewardCustomerCost) {
+        this.weekdayRewardCustomerCost = weekdayRewardCustomerCost;
+    }
+
+    public double getWeekendRewardCustomerCost() {
+        return weekendRewardCustomerCost;
+    }
+
+    public void setWeekendRewardCustomerCost(double weekendRewardCustomerCost) {
+        this.weekendRewardCustomerCost = weekendRewardCustomerCost;
     }
 
     @Override
     public String toString() {
-        return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", weekdayRegularCustomerPrice="
-                + weekdayRegularCustomerCost + ", weekendRegularCustomerPrice=" + weekendRegularCustomerCost + "]";
+        return "Hotels [hotelName=" + hotelName + ", rating=" + rating + ", Regular Customer WeekDay Cost="
+                + weekdayRegularCustomerCost + "Regular Customer WeekDay Cost=" + weekdayRegularCustomerCost + ", Reward Customer WeekDay Cost="
+                + weekdayRewardCustomerCost + "Reward Customer WeekDay Cost=" + weekendRewardCustomerCost + "]\n";
     }
+
 }
